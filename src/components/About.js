@@ -1,32 +1,9 @@
-// import React, { useState } from 'react'
-
 export default function About(props) {
     let myStyle = {
-        color: props.mode==='dark'?'white':'black' ,
-        backgroundColor: props.mode==='dark'?'black':'white'
+        color: props.mode === 'dark' ? 'white' : 'black',
+        backgroundColor: props.mode === 'dark' ? 'black' : 'white'
     }
-    // const [myStyle, setMyStyle] = useState({
-    //     color: 'white',
-    //     backgroundColor: 'black'
-    // })
-    // const [btnText,setBtnText]= useState("Enable Dark Mode")
-    // const toggleStyle = () => {
-    //     if (myStyle.color === 'white') {
-    //         setMyStyle({
-    //             color: 'black',
-    //             backgroundColor: 'white'
-    //         })
-    //         setBtnText("Enable Dark Mode")
-    //     }
-    //     else {
-    //         setMyStyle({
-    //             color: 'white',
-    //             backgroundColor: 'black',
-    //             corder: '1px solid white'
-    //         })
-    //         setBtnText("Enable Light Mode")
-    //     }
-    // }
+
     return (
         <div className='container' style={myStyle}>
             <h2 className='my-3'>About Us</h2>
@@ -34,43 +11,46 @@ export default function About(props) {
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button className="accordion-button" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
+                            <strong>Analyze Your Text with Ease
+                            </strong>
                         </button>
                     </h2>
                     <div id="collapseOne" style={myStyle} className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            TextCraft is designed to help you analyze your text quickly and efficiently. Whether you need to count words, characters, or determine the estimated reading time, TextCraft provides accurate results with just a few clicks. You can effortlessly <strong>convert text to uppercase or lowercase, capitalize sentences, and remove extra spaces </strong> to clean up your content. Need to identify links? Our <strong>link extraction </strong> feature makes it simple. Plus, you can <strong>copy text</strong> with one click and use the <strong>preview</strong> feature to see your edits in real time.
+
                         </div>
                     </div>
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
+                            <strong>Free of Cost, Always
+                            </strong>
                         </button>
                     </h2>
                     <div id="collapseTwo" style={myStyle} className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            TextCraft is completely free to use! Our character counter tool offers instant word and character count statistics for any given text. It’s perfect for writers, students, and professionals who need to meet specific word or character limits.
+
                         </div>
                     </div>
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            <strong>Fully Browser Compatible
+                            </strong>
                         </button>
                     </h2>
                     <div id="collapseThree" style={myStyle} className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            No matter which browser you use Chrome, Firefox, Internet Explorer, Safari, or Opera.TextCraft works seamlessly. It’s versatile enough to count characters in social media posts, blogs, books, Excel documents, PDF files, essays, and more.
+
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <div className="container my-3">
-                <button onClick={toggleStyle} type='button' className='btn btn-primary'>{btnText}</button>
-            </div> */}
         </div>
     )
 }

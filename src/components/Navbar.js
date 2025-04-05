@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 // import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
@@ -19,13 +20,25 @@ export default function Navbar(props) {
               <Link className="nav-link" to="/about">{props.aboutText}</Link>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          {/* <form className="d-flex" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button className="btn btn-outline-success" type="submit">Search</button>
-          </form>
-          <div className={`form-check form-switch mx-4 text-${props.mode==='light'?'dark':'light'}`}>
-            <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
+          </form> */}
+          {/* <div className={`form-check form-switch mx-4 text-${props.mode === 'light' ? 'dark' : 'light'}`}>
+            <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+            <i className="bi bi-brightness-high-fill"></i>
+            {/* <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label> 
+          </div> */}
+          <div className={`mx-4 text-${props.mode === 'light' ? 'dark' : 'light'}`}>
+            <i
+              className={`bi ${props.mode === 'dark' ? 'bi-brightness-high-fill' : 'bi-brightness-high'}`}
+              style={{
+                fontSize: '20px',
+                cursor: 'pointer',
+                color: props.mode === 'light' ? 'black' : 'white',
+              }}
+              onClick={props.toggleMode}
+            ></i>
           </div>
         </div>
       </div>
