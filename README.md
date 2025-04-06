@@ -79,5 +79,3 @@ Create a pull request.
 <strong>Credit:</strong> CodeWithHarry
 
 
-<strong>License 📄</strong>
-This project is open-source and available under the MIT License.
